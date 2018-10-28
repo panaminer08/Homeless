@@ -1,0 +1,2 @@
+module IdeasForHomelessHelper
+end
