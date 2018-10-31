@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'givings/index'
+  get 'givings/create'
+  get 'givings/new'
+  get 'givings/show'
+  get 'givings/update'
+  get 'givings/delete'
+  get 'givings/edit'
   get 'personal_stories/index'
   get 'personal_stories/create'
   get 'personal_stories/new'
@@ -34,5 +41,6 @@ Rails.application.routes.draw do
   resources :contributor_shelters
   resources :personal_stories
   resources :ideas_for_homeless
+  resources :givings
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
