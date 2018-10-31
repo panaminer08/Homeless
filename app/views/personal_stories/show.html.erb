@@ -1,1 +1,119 @@
- 
+ <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Homeless</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/ideas_for_homeless/show">Proposals</a></li>
+        <li><a href="/ideas_for_homeless/index">Home</a></li>
+        <li><a href="/givings/show">Donations</a></li>
+      </ul>
+    </div>
+</nav>
+    <center>
+        <div id="title_container">
+            <h2>Homelessness is <strong>NOT</strong> a condition<br>but a reality for many</h2>
+            <%= link_to image_tag('homeless') %>
+        </div>
+    </center>
+    <div class="row">
+        <div class="col s6">
+            <div id="title_container">
+                <div class="color">
+                <strong><p>This section allows you to voice your opinion or personal experience that you may have had with someone who has been placed on the curb.</p></strong>
+                </div>
+                <% @personal_story.each do |f| %>
+                <%= f.story %><hr>
+                <% end %>               
+            </div>
+        </div>
+        <div class="col s6">
+            <div id="title_container">
+                <div class="color">
+                   <strong> <p>Stories of common everyday New Yorkers that were living a normal life, just like you or me. Then homelessness struck.
+                    Some of these very people, you may have respected before. Some in charge of operating and representing the school board of NYC.
+                    Homelessness can strick at any moment, things just began to spirial out of control. Next time you see someone on the streets, or in a 
+                    subway car, ask yourself... Why. Get involved in the conversation and help cure this problem of homelessness that many of the children our
+                    kids play with, our former neighbors and even our old principal can be one of them. What if it was your loved one or family member?</p></strong>
+                </div>
+                <div class="inner">
+            <ul>
+                <li>In August 2018, there were 62,166 homeless people, 
+                including 15,189 homeless families with 22,511 homeless 
+                children, sleeping each night in the New York City 
+                municipal shelter system. Families make up three-quarters 
+                of the homeless shelter population.</li><hr>
+                <li>Research shows that the primary cause of homelessness, 
+                particularly among families, is lack of affordable housing. 
+                Surveys of homeless families have identified the following 
+                major immediate, triggering causes of homelessness: 
+                eviction; doubled-up or severely overcrowded housing; 
+                domestic violence; job loss; and hazardous housing conditions.</li><hr>
+                <li>Research shows that, compared to homeless families, 
+                homeless single adults have much higher rates of serious 
+                mental illness, addiction disorders, and other severe health problems.</li><hr>
+                <li>Each night thousands of unsheltered homeless people sleep on 
+                New York City streets, in the subway system, and in other public 
+                spaces. There is no accurate measurement of New York City’s unsheltered 
+                homeless population, and recent City surveys significantly underestimate 
+                the number of unsheltered homeless New Yorkers.</li><hr>
+                <li>In recent years, homelessness in New York City has reached
+                 the highest levels since the Great Depression of the 1930s.</li><hr>
+                <li>Homelessness is on the rise in the city, up 39% from 2016.
+                 And even more are opting to live in the city's streets, parks, 
+                 and alleys than shelters — nearly 4,000 as of July, the 
+                 most since 2005.</li><hr>
+                 <li>In central Brooklyn, a flashpoint of gentrification 
+                 in the city, one homeless named Moustafa,
+                  a 48-year-old mechanic who lost his shop and his home three years ago. Moustafa now lives
+                 out of his vehicle with a dozen or so other homeless mechanics,
+                 trying to find a quick job to stay afloat.</li>
+                 <li>Since Mayor Bill de Blasio took office in 2014, 
+                 the number has continued to creep up to a current estimate 
+                 of 77,000 people. The record number has come even as the city
+                has diverted tens of thousands of people from homelessness by 
+                pouring millions of dollars into new rental assistance programs 
+                and legal assistance to fight evictions. The programs cannot
+                keep pace with runaway rents, stagnant wages and vanishing 
+                affordable housing. About 100 families go to P.A.T.H. each day.
+                In hopes of ending the use of private apartments and hotel 
+                rooms as stopgaps, the Department of Homeless Services is 
+                expanding its shelter system under a plan to open 90 facilities
+                over five years.</li>
+                <li>Since 2014, 100,000+ New Yorkers have found permanent 
+                homes w/ our rebuilt rental assistance, rehousing, & homelessness 
+                prevention programs, after years of disinvestment. </li><hr>
+                <li>Candi Darley, now 52, was working as a nurse and living in
+                Washington, D.C., with her new husband, when, she said, “something 
+                started happening to me.” She began to have chronic pain and allergic
+                reactions to common chemicals. After she was divorced from her then 
+                husband, he condition snowballed. Her mental and physical illness, 
+                later diagnosed as depression, fibromyalgia, and chronic fatigue 
+                syndrome, led her to miss work. She took her son to live with a relative,
+                and she admitted herself into a shelter. She thought this would be a few
+                months experience. She was homelss for seven years.</li><hr>
+                <li>ome people seem to be under the impression that folks who are homeless 
+                either want to be out there so they can be “free” to drink or use drugs, 
+                or that they struggle with some kind of mental illness. The reality of
+                the whole thing is actually surprising and it might shock  you. 
+                “Less than 4 in 10 homeless people are dependent on alcohol and less 
+                than 3 in 10 abuse other drugs, according to 2003 data from the Substance 
+                Abuse and Mental Health Services Administration.</li><hr>
+                <li>Life for the half a million Americans who are homeless is short — 
+                they die, on average, before age 50 — and it is certainly brutish.
+                Skin infections, fungal outbreaks, and parasites are common. Bronchitis, 
+                pneumonia, and even tuberculosis spread in the close quarters of homeless 
+                shelters and squats. More than 5 percent of U.S. tuberculosis cases
+                occur in homeless patients, according to the Centers for Disease Control
+                and Prevention.<li><hr>
+                <li>The Living in Communities (LINC) Rental Assistance programs were
+                 created to help move families out of shelter and into stable housing.</li><hr>
+                 
+
+
+
+
+                
+            </ul>
+                </div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,3 @@
 class PersonalStory < ApplicationRecord
-belongs_to :contributor
+    has_one :contributor
 end

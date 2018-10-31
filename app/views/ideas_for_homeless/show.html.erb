@@ -1,2 +1,75 @@
-<h1>IdeasForHomeless#show</h1>
-<p>Find me in app/views/ideas_for_homeless/show.html.erb</p>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Homeless</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/ideas_for_homeless/index">Home</a></li>
+        <li><a href="/givings/show">Donate</a></li>
+        <li><a href="/personal_stories/show">Our stories</a></li>
+      </ul>
+    </div>
+</nav>
+<center>
+    <div id="title_container">
+        <h2>Helping the homeless is more <br>than a Government problem</h2>
+        <%= link_to image_tag('cans') %>
+    </div>
+</center>
+<div class="row">
+    <div class="col s4">
+        <div id="title_container">
+            <div class="color"> 
+                <strong>
+                    <%= @youth['meta']['view']['name'] %><br>
+                    <%= @youth['meta']['view']['attribution'] %>
+                </strong>        
+           
+                <strong>
+                    <%= @youth['meta']['view']['description'] %>
+                </strong>
+            </div>
+            <div class="inner"> 
+                    <% @youth['data'].each do |f| %>
+                    <%= f[7] %><br>
+                    <%= f[8] %><br>
+                    <%= f[9] %><br>
+                    <%= f[10] %><br>
+                    <%= f[11] %><br>
+                    <%= f[12] %><br>
+                    <%= f[13] %><br>
+                    <%= f[14] %><br>
+                    <%= f[15][0] %><br>
+                    <%= f[15][1] %><hr>
+                    <% end %>
+            </div>
+        </div>
+    </div>
+    <div class="col s4">
+        <div id="title_container">
+            <% @ideas_for_homeless.each do |f| %>
+            <%= f.ideas %><hr>
+            <% end %>
+        </div>
+    </div> 
+    <div class="col s4">
+        <div id="title_container">
+            <div class="color">
+                <strong>
+                New York Times articles on the homeless nation-wide, with headlining stories listed below.<br>
+                For more information on the Homeless and about a particular article.
+                As always, you can always come here to get all important information about the homeless in one place.
+                </strong>
+            </div>
+            <div class="inner">
+                    <% @homeless['response']['docs'].each do |home| %><br>
+                    <center><%= home['document_type'] %>:
+                    <%= home['pub_date'] %>
+                    <%# <%= home['web_url'] %><br> %>
+                    <%= home['snippet'] %><br>
+                    <%= home['headline']['main'] %></center><hr>
+                    <% end %>            
+            </div> 
+        </div>
+    </div>
+</div>
+
+ 

@@ -1,74 +1,9 @@
-<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">Homeless</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="/ideas_for_homeless/index">Home</a></li>
-        <li><a href="/givings/new">Donate</a></li>
-        <li><a href="/personal_stories/new">Our stories</a></li>
-      </ul>
-    </div>
-</nav>
-<center>
-    <div id="title_container">
-        <h2>Helping the homeless is more <br>than a Government problem</h2>
-        <%= link_to image_tag('cans') %>
-    </div>
-</center>
-<div class="row">
-    <div class="col s4">
-        <div id="title_container">
-            <div class="color"> 
-                <strong>
-                    <%= @youth['meta']['view']['name'] %><br>
-                    <%= @youth['meta']['view']['attribution'] %>
-                </strong>        
-           
-                <strong>
-                    <%= @youth['meta']['view']['description'] %>
-                </strong>
-            </div>
-            <div class="inner"> 
-                    <%= @youth['data'].each do |f| %>
-                    <%= f[7] %><br>
-                    <%= f[8] %><br>
-                    <%= f[9] %><br>
-                    <%= f[10] %><br>
-                    <%= f[11] %><br>
-                    <%= f[12] %><br>
-                    <%= f[13] %><br>
-                    <%= f[14] %><br>
-                    <%= f[15][0] %><br>
-                    <%= f[15][1] %><hr>
-                    <% end %>
-            </div>
-        </div>
-    </div>
-    <div class="col s4">
-        <div id="title_container">
-            <%= form_with model: @ideas_for_homeless, url:"/ideas_for_homelesses/create" do |ideas| %>
-            <%= ideas.label :Ideas_to_help_the_homeless%>
-            <%= ideas.text_field :ideas %><br>
-            <%= ideas.submit "Submit your idea" %>
-            <% end %>
-            <% @ideas_for_homelesses.last(20) do |f| %>
-            <%= f.ideas %>
-            <% end %>
-        </div>
-    </div> 
-    <div class="col s4">
-        <div id="title_container">
-            <div class="color">
-                    New York Times articles on the homeless nation-wide, with headlining stories listed below.<br>
-                    <strong> For more information on the Homeless and about a particular article, you have the option to follow the link that displays the websit of each story below.
-                    As always, you can always come here to get all important information about the homeless in one place.</strong>
-            </div>
-            <div class="inner">
-                <%= @homeless['response']['docs'].each do |h| %>
-                <%= h['web_url'] %><br>
-                <%= h['snippet'] %><br>
-                <%= h['headline'][0] %><hr>
-                <% end %>
-            </div>
-        </div>  
-    </div>
-</div>
+<%= form_with model: @ideas_for_homeless, url:"/ideas_for_homeless#create" do |ideas| %>
+<%= ideas.label :ideas_to_help_the_homeless %>
+<%= ideas.text_field :ideas %><br>
+<%= ideas.submit "Submit your idea" %>
+<% end %>
+
+
+
+

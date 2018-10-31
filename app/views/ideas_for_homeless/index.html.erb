@@ -1,27 +1,24 @@
 <div id="toc_container">
-<p class="toc_title">Contents</p>
+<p class="toc_title">Homeless-Connection</p>
 <ul class="toc_list">
-  <li><a href="#First_Point_Header">1 First Point Header</a>
+  <li><a href="/personal_stories/show">Stories with the homeless</a>
   <ul>
-    <li><a href="#First_Sub_Point_1">1.1 First Sub Point 1</a></li>
-    <li><a href="#First_Sub_Point_2">1.2 First Sub Point 2</a></li>
+    <li><a href="/ideas_for_home/show">Proposale to curb the Problem</a></li>
   </ul>
 </li>
-<li><a href="#Second_Point_Header">2 Second Point Header</a></li>
-<li><a href="#Third_Point_Header">3 Third Point Header</a></li>
+<li><a href="/givings/show">How you can Helpr</a></li>
 </ul>
 </div>
 
 <center><div id="title_container" class="center">
-  <h2>Homeless Statistics<br>In NY</h2>
+  <h2>Homeless counter by borough</h2>
 </div></center>
   <center>
     <div class="header">
-      <%= @shelters['data'].each do |s| %>
-      <%= s[0] %><br>
-     snap shot year: <%= s[8] %><br>
-    Location analyized: and # of persons counted location <br>
-      <%= s[9] %>;
+      <% @shelters['data'].each do |s| %>
+     snap shot year:<br> <%= s[8] %><br>
+    Borough analyized and # of persons counted<br>
+      <%= s[9] %>
       <%= s[10] %><hr>
       <% end %>
     </div>

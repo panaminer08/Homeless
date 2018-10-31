@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_30_201934) do
+ActiveRecord::Schema.define(version: 2018_10_31_204328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,11 +31,11 @@ ActiveRecord::Schema.define(version: 2018_10_30_201934) do
 
   create_table "givings", force: :cascade do |t|
     t.text "contributions"
-    t.bigint "contributors_id"
     t.string "contribution_shelter"
+    t.bigint "contributor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["contributors_id"], name: "index_givings_on_contributors_id"
+    t.index ["contributor_id"], name: "index_givings_on_contributor_id"
   end
 
   create_table "ideas_for_homelesses", force: :cascade do |t|
@@ -48,10 +48,10 @@ ActiveRecord::Schema.define(version: 2018_10_30_201934) do
 
   create_table "personal_stories", force: :cascade do |t|
     t.text "story"
-    t.bigint "contributors_id"
+    t.bigint "contributor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["contributors_id"], name: "index_personal_stories_on_contributors_id"
+    t.index ["contributor_id"], name: "index_personal_stories_on_contributor_id"
   end
 
 end

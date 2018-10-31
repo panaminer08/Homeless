@@ -21,21 +21,9 @@ Rails.application.routes.draw do
   get 'personal_story/index'
   get 'personal_story/update'
   get 'personal_story/new'
-  get 'personal_story/create'
+  post 'personal_story/create',   to: 'personal_story#create'   
   get 'personal_story/show'
   get 'personal_story/delete'
-  get 'contributor_shelters/index'
-  get 'contributor_shelters/new'
-  get 'contributor_shelters/show'
-  get 'contributor_shelters/create'
-  get 'contributor_shelters/update'
-  get 'contributor_shelters/delete'
-  get 'shelters/index'
-  get 'shelters/create'
-  get 'shelters/show'
-  get 'shelters/new'
-  get 'shelters/update'
-  get 'shelters/delete'
   devise_for :contributors
   resources :shelters
   resources :contributor_shelters

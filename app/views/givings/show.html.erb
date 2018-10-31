@@ -1,2 +1,49 @@
-<h1>Givings#show</h1>
-<p>Find me in app/views/givings/show.html.erb</p>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Homeless</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/ideas_for_homeless/index">Home</a></li>
+        <li><a href="/personal_stories/show">Our Stories</a></li>
+        <li><a href="/ideas_for_homeless/show">Proposals</a></li>
+      </ul>
+    </div>
+</nav>
+<center>
+    <div id="title_container">
+        <h2>Helping the homeless is more <br>than a Government problem</h2>
+        <%= link_to image_tag('volunteers') %>
+    </div>
+</center>
+<div class="row">
+    <div class="col s6">
+        <div id="title_container">
+            <div class="color">
+                <strong><p>Drop-off centers located around NYC, where you can donate and contribute to helping the homeless temporarily and for the homeless of tommorrow.</p></strong>
+            </div>
+            <div class="inner">
+                <% @give['data'].each do |d| %>
+                 <%= d[0] %>
+                <%= d[7] %><br>
+                <%= d[8] %><br>
+                <%= d[9] %><br>
+                <%= d[10] %><br>
+                <%= d[11] %><hr>
+                 <% end %> 
+            </div>
+        </div>
+    </div>
+    <div class="col s3">
+        <div id="title_container">
+            <div class="color">   
+            <p><strong>Donations are well received</strong><br>please remember that we are all humans</p>         
+            </div>
+            <% @giving.each do |donations| %>
+            My Donation:
+            <%= donations.contributions %><br>
+            My Donation Center:
+            <%= donations.contribution_shelter %><hr>
+            <% end %>
+        </div>
+    </div>
+</div>
+

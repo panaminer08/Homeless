@@ -1,3 +1,3 @@
 class Giving < ApplicationRecord
-    belongs_to :contributor
+    has_one :contributor
 end
