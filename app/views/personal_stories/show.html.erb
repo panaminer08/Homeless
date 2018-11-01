@@ -3,7 +3,7 @@
       <a href="#" class="brand-logo center">Homeless</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="/ideas_for_homeless/show">Proposals</a></li>
-        <li><a href="/ideas_for_homeless/index">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/givings/show">Donations</a></li>
       </ul>
     </div>
@@ -20,7 +20,8 @@
                 <div class="color">
                 <strong><p>This section allows you to voice your opinion or personal experience that you may have had with someone who has been placed on the curb.</p></strong>
                 </div>
-                <% @personal_story.each do |f| %>
+                <%= render "new" %><br>
+                <% @personal_story.reverse.each do |f| %>
                 <%= f.story %><hr>
                 <% end %>               
             </div>

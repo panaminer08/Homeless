@@ -1,8 +1,0 @@
-
-<%= form_for @giving do |give| %>
-    <%= give.label :Your_Contributions %>
-    <%= give.text_field :contributions %><br>
-    <%= give.label :what_is_your_contribution %>
-    <%= give.select :contribution_shelter, options_for_select(['shelter in Manhattan', 'Shelter in Coney Island', 'Shelter in Bronx', 'Shelter in Brooklyn', 'Shelter in Harlem']) %>
-    <%= give.submit %>
-<% end %>

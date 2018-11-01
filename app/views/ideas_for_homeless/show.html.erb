@@ -2,7 +2,7 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">Homeless</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="/ideas_for_homeless/index">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/givings/show">Donate</a></li>
         <li><a href="/personal_stories/show">Our stories</a></li>
       </ul>
@@ -45,7 +45,8 @@
     </div>
     <div class="col s4">
         <div id="title_container">
-            <% @ideas_for_homeless.each do |f| %>
+            <%= render "new" %>
+            <% @ideas_for_homeless.reverse.each do |f| %>
             <%= f.ideas %><hr>
             <% end %>
         </div>
@@ -63,7 +64,6 @@
                     <% @homeless['response']['docs'].each do |home| %><br>
                     <center><%= home['document_type'] %>:
                     <%= home['pub_date'] %>
-                    <%# <%= home['web_url'] %><br> %>
                     <%= home['snippet'] %><br>
                     <%= home['headline']['main'] %></center><hr>
                     <% end %>            

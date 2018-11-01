@@ -1,4 +1,4 @@
-<%= form_with model: @ideas_for_homeless, url:"/ideas_for_homeless#create" do |ideas| %>
+<%= form_with model: @ideas_for_homeless.new, url:"/ideas_for_homeless#create" do |ideas| %>
 <%= ideas.label :ideas_to_help_the_homeless %>
 <%= ideas.text_field :ideas %><br>
 <%= ideas.submit "Submit your idea" %>

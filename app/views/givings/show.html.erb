@@ -2,7 +2,7 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">Homeless</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="/ideas_for_homeless/index">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/personal_stories/show">Our Stories</a></li>
         <li><a href="/ideas_for_homeless/show">Proposals</a></li>
       </ul>
@@ -22,7 +22,7 @@
             </div>
             <div class="inner">
                 <% @give['data'].each do |d| %>
-                 <%= d[0] %>
+                <%= d[0] %>
                 <%= d[7] %><br>
                 <%= d[8] %><br>
                 <%= d[9] %><br>
@@ -37,7 +37,8 @@
             <div class="color">   
             <p><strong>Donations are well received</strong><br>please remember that we are all humans</p>         
             </div>
-            <% @giving.each do |donations| %>
+           <%= render "new" %>
+            <% @giving.reverse.each do |donations| %>
             My Donation:
             <%= donations.contributions %><br>
             My Donation Center:
