@@ -9,7 +9,7 @@ class GivingsController < ApplicationController
 
   def create
     @giving = Giving.create(giving_params)
-    redirect_to givings_show_path
+    redirect_to giving_path(@giving)
   end
 
   def show
