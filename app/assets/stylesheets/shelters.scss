@@ -33,9 +33,9 @@
 }
 
 .color {
-    background-color: gold;
+    background-color: rgb(24, 6, 75);
     padding: 10px;
-    font: white;
+    color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
@@ -47,5 +47,11 @@
 .inner {
     background-color: white;
     border: 5px solid black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
+.outer {
+    background-color: transparent;
+    border: 5px solid black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}

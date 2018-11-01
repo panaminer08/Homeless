@@ -3,24 +3,50 @@
 <ul class="toc_list">
   <li><a href="/personal_stories/show">Stories with the homeless</a>
   <ul>
-    <li><a href="/ideas_for_home/show">Proposale to curb the Problem</a></li>
+    <li><a href="/ideas_for_homeless/show">Proposale to curb the Problem</a></li>
   </ul>
 </li>
 <li><a href="/givings/show">How you can Helpr</a></li>
 </ul>
 </div>
 
-<center><div id="title_container" class="center">
-  <h2>Homeless counter by borough</h2>
-</div></center>
-  <center>
+<center>
+  <div id="title_container">
+    <h2>Homeless counted by borough</h2>
+  </div>
+</center>
+<div class="row">
+  <div class="col s3">
     <div class="header">
       <% @shelters['data'].each do |s| %>
-     snap shot year:<br> <%= s[8] %><br>
-    Borough analyized and # of persons counted<br>
+      snap shot year:<br> <%= s[8] %><br>
+      Borough analyized and # of persons counted<br>
       <%= s[9] %>
       <%= s[10] %><hr>
       <% end %>
     </div>
-  </center>
+  </div>
+  <div class="col s8">
+    <div class="inner">
+      <p>Hi and thank you for visiting my site. The purpose of this site is to bring attention to the
+      troubles and difficulties that the homeless face and also the way that the homeless has affected 
+      society as a whole. I don't mean to give you a sob story of why and how we should help the homeless
+      but think of it as this. At one point, those same homeless people that you stare at or you think 
+      to yourself, how can they be human, were once living in a home, or has a mother no different than your.
+      They cry too. They have children or are capable of having children of their own. <hr>
+      I'm not saying that it's our job to help people that don't want to help themeselves,
+      I'm saying lets help cure the problem of why and how they got to that point. It is human
+      nature to strive for something, but when your hope and self-esteem has been drained from you, then you
+      have nothing left but a shell. Many of those people that you see crawling the side-walks,
+      begging for money, or pushing a shopping cart are shells pushing to survive. I'm not homeless,
+      and I don't have the mindset of someone who is homeless, but I'm speaking soley from my experience and
+      opinion as to how I see them. <hr>
+      I have 3 other pages, layed out with information for you to get educated on the problem facing America and
+      the rest of the world, and how you can contribute to solving the immediate problem and also drawing on some
+      of your brain power to think of a solution to solve the problem indeffinently. 
+      </p>
+    </div>
+  </div>
+</div>
+
 
